@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.sales.HelloController">
+    <VBox spacing="10" padding="10">
+        <HBox spacing="10">
+            <Button text="Загрузить Excel" onAction="#onLoadExcel"/>
+            <Label text="Год:"/>
+            <ComboBox fx:id="yearComboBox" onAction="#onYearSelected"/>
+        </HBox>
+        <LineChart fx:id="lineChart" title="Прибыль по месяцам">
+            <xAxis>
+                <CategoryAxis label="Месяц"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Прибыль"/>
+            </yAxis>
+        </LineChart>
+    </VBox>
+</AnchorPane>
